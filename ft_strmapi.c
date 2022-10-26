@@ -6,7 +6,7 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:43:19 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/25 20:35:34 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/26 16:49:19 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 // char func(unsigned int i ,char  c)
 // {
-//     c = 'f';
-//     return(c);
+//	i =0;
+//    c = 'f';
+//    return(c);
 // }
-// int main()
-// {
-//     char *s = "abcdef";
-//     //char (*f)(unsigned int ,char) = &func;
-//     printf("%s", ft_strmapi(s,&func));
-// }
+//// int main()
+//// {
+////     char *s = "abcdef";
+////     //char (*f)(unsigned int ,char) = &func;
+////     printf("%s", ft_strmapi(s,&func));
+//// }

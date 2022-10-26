@@ -6,9 +6,10 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:40:38 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/25 17:03:17 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/26 10:45:38 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include"libft.h"
 
 char	*ft_strdup(const char *s1)

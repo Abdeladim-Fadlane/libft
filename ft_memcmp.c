@@ -6,9 +6,10 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:33:49 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/25 17:29:37 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/26 14:21:26 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include"libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)

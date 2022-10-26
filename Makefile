@@ -6,11 +6,11 @@
 #    By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/23 10:20:33 by afadlane          #+#    #+#              #
-#    Updated: 2022/10/25 11:25:03 by afadlane         ###   ########.fr        #
+#    Updated: 2022/10/26 17:32:36 by afadlane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=libft.a
+NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
 SRCS =  ft_isalpha.c \
 		ft_isdigit.c \
@@ -53,9 +53,8 @@ all : ${NAME}
 
 ${NAME} : ${OBJ}
 	ar r ${NAME} ${OBJ}
-
-# %.o : %.c
-# 	gcc $(FLAGS) -c $^
+ %.o : %.c
+	gcc $(CFLAGS) -c $^
 clean :
 	rm -f ${OBJ}
 

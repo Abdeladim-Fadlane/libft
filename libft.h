@@ -6,7 +6,7 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 11:47:15 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/23 14:42:26 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/26 17:34:41 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include<unistd.h>
 # include<stdio.h>
 # include<string.h>
+#include <fcntl.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);

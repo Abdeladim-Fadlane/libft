@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afadlane <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 14:46:42 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/25 16:49:16 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/26 13:49:27 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include"libft.h"
 
 void	*ft_calloc(size_t count, size_t size)
@@ -18,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 	if (count == SIZE_MAX || size == SIZE_MAX)
 		return (NULL);
 	p = malloc(count * size);
-	if (p == 0)
+	if (!p)
 		return (NULL);
 	ft_bzero(p, count * size);
 	return (p);
