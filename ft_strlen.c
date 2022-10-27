@@ -6,7 +6,7 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:42:44 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/26 18:19:13 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/26 20:07:03 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ size_t	ft_strlen(const char *s)
 	size_t	i;
 
 	i = 0;
-	if(!s)
-		return (0);
 	while (s[i] != '\0')
 		i++;
 	return (i);

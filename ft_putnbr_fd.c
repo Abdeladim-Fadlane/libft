@@ -6,7 +6,7 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 08:28:33 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/26 17:36:11 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/26 20:08:32 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ void	ft_putnbr_fd(int n, int fd)
 	else
 		ft_putchar_fd(n + '0', fd);
 }
-int main()
-{
-    int fd;
-    fd = open("test.txt", O_WRONLY | O_CREAT, 0444);
-    ft_putnbr_fd(4587899,fd);
-    close(fd);
-}
+//int main()
+//{
+//    int fd;
+//    fd = open("test.txt", O_WRONLY | O_CREAT, 0444);
+//    ft_putnbr_fd(4587899,fd);
+//    close(fd);
+//}

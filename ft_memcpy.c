@@ -6,9 +6,10 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:34:27 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/25 17:32:09 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/27 15:29:43 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include"libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
@@ -31,8 +32,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 }
 //int main()
 //{
-//	char dst[12] = "123";
-//	char src[] = "12312345678";
-//	printf("%s\n",ft_memcpy(dst, src, 4));
-//    printf("%s", dst);
+//	char src[] = "1a2b3c";
+//	printf("%s\n",ft_memcpy(src + 2, src, 3));
 //} 
