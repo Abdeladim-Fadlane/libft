@@ -6,7 +6,7 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:46:27 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/30 09:43:25 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/30 13:21:27 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,17 +32,21 @@ static	int	ft_count(const char *s, char c)
 	return (count);
 }
 
-static void	ft_free(char **s, int i)
+static char	**ft_free(char **s)
 {
-	while (i >= 0)
+	int	i;
+
+	i = 0;
+	while (s[i])
 	{
 		free(s[i]);
-		i--;
+		i++;
 	}
 	free(s);
+	return (NULL);
 }
 
-static void	my_func(const char *s, char c, char **p)
+static char	**my_func(const char *s, char c, char **p)
 {
 	int		j;
 	int		k;
@@ -58,14 +62,15 @@ static void	my_func(const char *s, char c, char **p)
 			while (s[i] != c && s[i])
 				i++;
 			p[j] = ft_substr(s, k, (i - k));
-			if (p[j] == NULL)
-				ft_free (p, j);
+			if (!p[j])
+				return (ft_free(p));
 			j++;
 		}
 		else
 			i++;
 	}
 	p[j] = 0;
+	return (p);
 }
 
 char	**ft_split(char const *s, char c)
@@ -77,6 +82,5 @@ char	**ft_split(char const *s, char c)
 	p = (char **)malloc(sizeof(char *) * (ft_count(s, c) + 1));
 	if (!p)
 		return (NULL);
-	my_func(s, c, p);
-	return (p);
+	return (my_func(s, c, p));
 }

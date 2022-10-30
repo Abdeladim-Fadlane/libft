@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include"libft.h"
+
 int	ft_atoi(const char *str)
 {
 	int			i;
@@ -30,11 +32,11 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		res = res * 10 + str[i] - '0';
+		if (res >= 9223372036854775807 && sn == 1)
+			return (-1);
+		if (res >= 9223372036854775807 && sn == -1)
+			return (0);
 		i++;
 	}
-	if (res >= 9223372036854775807 && sn == 1)
-		return (-1);
-	if (res >= 9223372036854775807 && sn == -1)
-		return (0);
 	return (res * sn);
 }
