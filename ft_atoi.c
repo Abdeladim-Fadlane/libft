@@ -9,11 +9,12 @@
 /*   Updated: 2022/10/25 16:35:51 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	res;
-	int	sn;
+	int			i;
+	long		res;
+	int			sn;
 
 	i = 0;
 	res = 0;
@@ -28,9 +29,12 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		res = res * 10;
-		res = res + str[i] - '0';
+		res = res * 10 + str[i] - '0';
 		i++;
 	}
+	if (res >= 9223372036854775807 && sn == 1)
+		return (-1);
+	if (res >= 9223372036854775807 && sn == -1)
+		return (0);
 	return (res * sn);
 }

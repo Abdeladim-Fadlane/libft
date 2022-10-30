@@ -6,13 +6,13 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 18:46:27 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/25 19:14:39 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/30 09:43:25 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count(const char *s, char c)
+static	int	ft_count(const char *s, char c)
 {
 	size_t	i;
 	int		count;
@@ -32,18 +32,24 @@ int	ft_count(const char *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static void	ft_free(char **s, int i)
 {
-	char	**p;
-	int		i;
+	while (i >= 0)
+	{
+		free(s[i]);
+		i--;
+	}
+	free(s);
+}
+
+static void	my_func(const char *s, char c, char **p)
+{
 	int		j;
 	int		k;
+	int		i;
 
-	i = 0;
 	j = 0;
-	p = (char **)malloc(sizeof(char *) * (ft_count(s, c) + 1));
-	if (!p)
-		return (NULL);
+	i = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] != c && s[i])
@@ -51,24 +57,26 @@ char	**ft_split(char const *s, char c)
 			k = i;
 			while (s[i] != c && s[i])
 				i++;
-			p[j++] = ft_substr(s, k, (i - k));
+			p[j] = ft_substr(s, k, (i - k));
+			if (p[j] == NULL)
+				ft_free (p, j);
+			j++;
 		}
 		else
 			i++;
 	}
 	p[j] = 0;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**p;
+
+	if (!s)
+		return (NULL);
+	p = (char **)malloc(sizeof(char *) * (ft_count(s, c) + 1));
+	if (!p)
+		return (NULL);
+	my_func(s, c, p);
 	return (p);
 }
-// int main()
-// {
-//     char s[] = "hh aa bb cc";
-//     char** str;
-//     str = ft_split(s,'h'); 
-//         int i;
-//         i = 0;
-//         while(i < ft_count(s,'h'))
-//         {
-//             printf("s[%d]=[%s]\n",i, *(str + i));
-//             i++;
-//         }
-// }

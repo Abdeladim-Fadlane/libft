@@ -6,7 +6,7 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 12:13:48 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/26 16:53:35 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/29 10:48:46 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{
@@ -23,14 +25,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-// void func(unsigned int i ,char  *c)
-// {
-//		 *c = '4';
-//		 i = 0;	
-// }
-// int main()
-// {
-//     char s[] = "abcdef";
-//	 ft_striteri(s,&func);
-//     printf("%s",s);
-// }

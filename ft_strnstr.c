@@ -6,7 +6,7 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:44:36 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/27 15:34:57 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/27 17:50:49 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 	p = (char *)haystack;
 	i = 0;
-	j = 0 ;
 	if (!needle[i])
 		return (p);
 	if (!len || !p[i])

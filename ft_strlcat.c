@@ -6,11 +6,11 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:41:51 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/27 09:53:41 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/29 18:07:12 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
@@ -39,10 +39,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (len_src + len_dst);
 }
-//int main()
-//{
-//	char dst[12] = "12345678";
-//	char src[] = "123";
-//	printf("%zu\n",ft_strlcat(NULL, src, 0));
-//	printf("%s", dst);
-//}

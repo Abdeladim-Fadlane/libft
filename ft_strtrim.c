@@ -6,7 +6,7 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:45:45 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/26 10:00:29 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/29 10:52:02 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		len;
 	char	*p;
 
+	if (!s1 || !set)
+		return (NULL);
 	len = ft_strlen(s1);
 	i = 0;
-	if (!s1 && !set)
-		return (NULL);
 	while (s1[i] != '\0' && ft_strchr(set, s1[i]))
 		i++;
 	while (i < len - 1 && ft_strchr(set, s1[len -1]))

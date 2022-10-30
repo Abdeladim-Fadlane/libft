@@ -6,7 +6,7 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:38:26 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/25 18:43:03 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/29 10:54:39 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	unsigned int	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
@@ -23,7 +25,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-// int main()
-// {
-//      ft_putstr_fd("abdo fadlane :",1);
-// }

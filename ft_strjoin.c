@@ -6,25 +6,36 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:41:21 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/25 17:13:49 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/29 10:50:42 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include"libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t		lens1;
-	size_t		lens2;
-	char		*p;
+	int		j;
+	int		i;
+	char	*p;
 
-	lens1 = ft_strlen(s1);
-	lens2 = ft_strlen(s2);
-	if (!s1 && !s2)
+	if (!s1 || !s2)
 		return (NULL);
-	p = malloc((lens1 + lens2 + 1) * sizeof(char));
-	if (p == 0)
+	i = 0;
+	j = 0 ;
+	p = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	if (!p)
 		return (NULL);
-	ft_memcpy(p, s1, lens1);
-	ft_memcpy(p + lens1, s2, lens2 + 1);
+	while (s1[i])
+	{
+		p[i] = s1[i];
+		i++;
+	}
+	while (s2[j])
+	{
+		p[i] = s2[j];
+		i++;
+		j++;
+	}
+	p[i] = 0;
 	return (p);
 }

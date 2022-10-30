@@ -6,7 +6,7 @@
 /*   By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 16:35:52 by afadlane          #+#    #+#             */
-/*   Updated: 2022/10/25 19:04:45 by afadlane         ###   ########.fr       */
+/*   Updated: 2022/10/29 10:40:56 by afadlane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if (!d && !s)
 		return (NULL);
+	if (src == dst)
+		return (dst);
 	if (s < d)
 	{
 		i = len -1;

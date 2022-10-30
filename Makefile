@@ -6,11 +6,12 @@
 #    By: afadlane <afadlane@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/23 10:20:33 by afadlane          #+#    #+#              #
-#    Updated: 2022/10/27 12:55:15 by afadlane         ###   ########.fr        #
+#    Updated: 2022/10/29 18:12:50 by afadlane         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+gcc  =  cc
 CFLAGS = -Wall -Wextra -Werror
 SRCS =  ft_isalpha.c \
 		ft_isdigit.c \
@@ -45,7 +46,7 @@ SRCS =  ft_isalpha.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
-		ft_split.c \
+		ft_split.c 
 
 OBJ = ${SRCS:%.c=%.o}
 
@@ -53,11 +54,11 @@ all : ${NAME}
 
 ${NAME} : ${OBJ}
 	ar r ${NAME} ${OBJ}
- %.o : %.c
-	gcc $(CFLAGS) -c $^
+
 clean :
 	rm -f ${OBJ}
 
 fclean : clean
 	rm -f ${NAME}
+	
 re : fclean all 
